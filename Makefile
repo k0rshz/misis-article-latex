@@ -2,7 +2,7 @@ LATEX ?= tectonic
 
 .PHONY: all article example dist clean
 
-all: article example
+all: article
 
 article:
 	mkdir -p build
@@ -12,11 +12,12 @@ example:
 	mkdir -p example/build
 	cd example && $(LATEX) -o build example.tex
 
-# Zip for Overleaf: class, blank template, and docs. The sample article stays out.
+# Zip for Overleaf: article sources and class. The teacher's sample stays out.
 dist: 
 	rm -rf dist
 	mkdir -p dist/misis-article
-	cp misisarticle.cls article.tex README.md LICENSE dist/misis-article/
+	cp misisarticle.cls article.tex references.tex README.md LICENSE dist/misis-article/
+	cp -r sections paper dist/misis-article/
 	cd dist && zip -r misis-article.zip misis-article
 	rm -rf dist/misis-article
 

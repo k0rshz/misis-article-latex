@@ -12,6 +12,7 @@
 *.fdb_latexmk
 *.xdv
 *.pdf
+!/paper/article.pdf
 
 /build/
 example/build/*
