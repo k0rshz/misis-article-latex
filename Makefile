@@ -17,7 +17,7 @@ dist:
 	rm -rf dist
 	mkdir -p dist/misis-article
 	cp misisarticle.cls article.tex references.tex README.md LICENSE dist/misis-article/
-	cp -r sections paper dist/misis-article/
+	cp -r sections figures paper dist/misis-article/
 	cd dist && zip -r misis-article.zip misis-article
 	rm -rf dist/misis-article
 

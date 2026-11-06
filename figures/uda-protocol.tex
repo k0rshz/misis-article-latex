@@ -1,0 +1,22 @@
+% Авторская схема. Все подписи набираются шрифтом статьи.
+\begingroup
+\setlength{\unitlength}{1mm}
+\fontsize{8.5}{10}\selectfont
+\linethickness{0.4pt}
+\begin{picture}(86,61)
+  \put(0,49){\framebox(40,12){\shortstack{GTA5: $(x^s,y^s)$\\изображения и маски}}}
+  \put(46,49){\framebox(40,12){\shortstack{Cityscapes train: $x^t$\\без обучающих масок}}}
+  \put(20,49){\line(0,-1){6}}
+  \put(66,49){\line(0,-1){6}}
+  \put(20,43){\line(1,0){46}}
+  \put(43,43){\vector(0,-1){6}}
+  \put(7,25){\framebox(72,12){\shortstack{Обучение общей модели\\$\min_\theta\;L_s+\sum_k\lambda_k L_k^{\mathrm{adapt}}$}}}
+  \put(43,25){\vector(0,-1){11}}
+  \put(45,19){\makebox(0,0)[l]{параметры $\theta$}}
+  \put(0,0){\framebox(25,14){\shortstack{Cityscapes val\\изображения}}}
+  \put(25,7){\vector(1,0){6}}
+  \put(31,0){\framebox(24,14){\shortstack{Модель\\предсказания}}}
+  \put(55,7){\vector(1,0){6}}
+  \put(61,0){\framebox(25,14){\shortstack{Сравнение\\с масками val\\mIoU, IoU}}}
+\end{picture}
+\endgroup
